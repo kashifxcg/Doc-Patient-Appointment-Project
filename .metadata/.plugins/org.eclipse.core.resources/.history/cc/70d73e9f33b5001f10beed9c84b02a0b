@@ -1,0 +1,21 @@
+package com.tut.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.tut.entity.Patient;
+import com.tut.repo.IPatientRepo;
+
+@Service
+public class PatientServices implements IPatientService{
+	
+	IPatientRepo patientRepo; 
+	
+	@Override
+	public Patient getAllPatient() {
+		
+		return  patientRepo.findAll();
+	}
+	
+}

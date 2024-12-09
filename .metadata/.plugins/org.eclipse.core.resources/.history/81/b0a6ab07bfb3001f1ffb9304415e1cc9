@@ -1,0 +1,23 @@
+package com.cg.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cg.entity.Doctor;
+import com.cg.repo.IDocRepo;
+
+
+@Service
+public class DocService implements IDocService{
+	
+	@Autowired
+	IDocRepo docRepo;
+	
+	@Override
+	public List<Doctor> getdocs() {
+		return docRepo.findAll();
+	}
+	
+}

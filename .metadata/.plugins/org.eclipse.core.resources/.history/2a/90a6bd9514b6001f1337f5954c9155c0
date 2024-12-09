@@ -1,0 +1,18 @@
+spring.application.name=DocAditi
+
+# Database configuration
+spring.datasource.url=jdbc:postgresql://localhost:5432/docAditiDB
+spring.datasource.username=postgres
+spring.datasource.password=postgres
+spring.jpa.hibernate.ddl-auto=update
+server.port=8080
+
+## Hibernate Properties
+# The SQL dialect makes Hibernate generate better SQL for the chosen database
+#spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+
+#Configuration for eureka
+eureka.client.serviceUrl.defaultZone = http://localhost:8761/eureka
+eureka.client.register-with-eureka= true
+eureka.instance.instance-id=${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+

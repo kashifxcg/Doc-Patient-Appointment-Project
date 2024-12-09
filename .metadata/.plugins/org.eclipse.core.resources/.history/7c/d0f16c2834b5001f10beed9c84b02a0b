@@ -1,0 +1,9 @@
+package com.tut.services;
+
+import com.tut.entity.Patient;
+
+public interface IPatientService {
+
+	Patient getAllPatient();
+
+}

@@ -1,0 +1,39 @@
+package com.cg.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cg.entity.Doctor;
+import com.cg.service.DocService;
+import com.cg.service.IDocService;
+
+
+// We make our end points always in Controller And gives response to view
+@RestController
+public class DocController {
+	@Autowired
+	IDocService docService;
+	
+	
+	@GetMapping(path = "/alldocs")
+	public List<Doctor> getDocs(){
+		return	docService.getdocs();
+	}
+	
+	
+	//
+	@PostMapping(path ="/createdoc")
+	public Doctor createDoc(@RequestBody Doctor doc)
+	{
+		return docService.createDocInDB(doc);
+		
+	}
+	
+	
+}

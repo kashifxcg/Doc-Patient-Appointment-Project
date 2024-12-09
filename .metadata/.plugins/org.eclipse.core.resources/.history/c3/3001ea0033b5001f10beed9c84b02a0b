@@ -1,0 +1,15 @@
+package com.tut.services;
+
+import com.tut.entity.Patient;
+
+public class PatientServices implements IPatientService{
+	
+	IPatientRepo patientRepo;
+	
+	@Override
+	public Patient getAllPatient() {
+		
+		return ;
+	}
+	
+}

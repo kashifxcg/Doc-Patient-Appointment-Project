@@ -1,0 +1,11 @@
+package com.tut.feign;
+
+import com.tut.dto.DoctorDTO;
+
+public class DoctorFeignClientFallBack {
+	
+	public DoctorDTO doctorFallBack(int id) {
+		System.out.println("Falling Back for Doctor");
+		return new DoctorDTO();
+	}
+}

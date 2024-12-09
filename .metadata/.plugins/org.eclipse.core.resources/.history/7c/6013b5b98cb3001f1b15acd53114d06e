@@ -1,0 +1,12 @@
+<!DOCTYPE html xmlns:th="http://www.thymleaf.org">
+<head>
+	<title>Rock-Paper-Scissors</title>
+</head>
+<body>
+	Hello World
+	<br>
+	we are in results page	
+	your choice is: <span th:text="${yourChoice}" />
+	
+</body>
+</html>

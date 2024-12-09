@@ -1,0 +1,17 @@
+package com.tut.feign;
+
+import java.util.Optional;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.tut.dto.DoctorDTO;
+
+@FeignClient(name="testFeignClient",url="${PRODUCT_SERVICE:http://localhost:8080}")
+public interface IDoctorFeignClient {
+	
+	@GetMapping("/getbyid/{id}")
+	Optional<DoctorDTO> getDoctorById(@PathVariable int id);
+	
+}

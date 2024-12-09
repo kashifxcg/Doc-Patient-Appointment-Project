@@ -1,0 +1,11 @@
+spring.application.name=DocAditi
+
+# Database configuration
+spring.datasource.url=jdbc:postgresql://localhost:5432/docAditiDB
+spring.datasource.username=postgres
+spring.datasource.password=root
+spring.jpa.hibernate.ddl-auto=update
+server.port=9032
+## Hibernate Properties
+# The SQL dialect makes Hibernate generate better SQL for the chosen database
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect

@@ -1,0 +1,27 @@
+package com.mcnz;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class WebController {
+	
+	@Value("${local.server.port}")
+    private int port;
+
+    public void logPort() {
+        System.out.println("Application is running on port: " + port);
+    }
+	
+	@GetMapping("/playgame")
+	public String playGame(@RequestParam(name="choice") String theChoice ,Model model) {
+		return "results";
+	}
+	
+	
+	
+	
+}

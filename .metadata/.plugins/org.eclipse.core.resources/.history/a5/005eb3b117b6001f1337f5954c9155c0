@@ -1,0 +1,5 @@
+package com.tut.dto;
+
+public class AppointmentDTO {
+
+}

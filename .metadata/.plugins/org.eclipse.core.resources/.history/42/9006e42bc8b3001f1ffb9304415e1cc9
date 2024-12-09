@@ -1,0 +1,16 @@
+package com.cg.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.cg.entity.Doctor;
+
+public interface IDocService {
+
+	List<Doctor> getdocs();
+
+	Doctor createDocInDB(Doctor doc);
+
+	Optional<Doctor> getById(int id);
+
+}

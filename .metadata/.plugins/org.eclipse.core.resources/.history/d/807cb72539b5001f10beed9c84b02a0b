@@ -1,0 +1,13 @@
+package com.tut.services;
+
+import java.util.List;
+
+import com.tut.entity.Patient;
+
+public interface IPatientService {
+
+	List<Patient> getAllPatient();
+
+	
+
+}

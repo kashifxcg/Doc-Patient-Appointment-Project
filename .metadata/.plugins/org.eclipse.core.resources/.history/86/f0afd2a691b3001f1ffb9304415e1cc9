@@ -1,0 +1,22 @@
+package com.mcnz;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@Controller
+@RequestMapping("/api")
+public class WebController {
+
+	@GetMapping("/playgame")
+    public String playGame(Model model) {
+        // Example of passing a dynamic variable to Thymeleaf
+        String yourChoice = "Rock"; // This could be dynamically set based on user input
+        model.addAttribute("yourChoice", yourChoice);
+        return "index"; // Thymeleaf template name
+    }	
+}
